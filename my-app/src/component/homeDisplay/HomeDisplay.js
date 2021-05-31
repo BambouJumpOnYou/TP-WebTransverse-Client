@@ -18,6 +18,8 @@ function CheckConfig() {
         tab.push(
           <>
             <br />
+            <br />
+            <br />
             <span>Nom : {data.ville.nom}</span>
             <br />
             <span>Code postal : {data.ville.codePostal}</span>
@@ -29,6 +31,9 @@ function CheckConfig() {
             <span>Appartement numero : {app.numero}</span>
             <br />
             <span>Appartement nbPieces : {app.nbPieces}</span>
+            <br />
+            <br />
+            <br />
           </>
         )
       })
