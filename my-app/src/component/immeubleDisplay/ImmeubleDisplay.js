@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { GET_ALL_IMMEUBLES } from "../../queries/immeubleQuery"
-import { AppartementCard } from "../appartementCard/AppartementCard"
+import { ImmeubleCard } from "../immeubleCard/ImmeubleCard"
 
 
 let tab = []
@@ -18,7 +18,7 @@ function DisplayAll() {
         imm.appartements.forEach((app) => {
           tab.push(
             <>
-              <AppartementCard appartements={app} />
+              <ImmeubleCard immeubles={imm} />
             </>
           )
         })
@@ -27,7 +27,7 @@ function DisplayAll() {
     return tab
   }
 }
-class AppartementDisplay extends Component {
+class ImmeubleDisplay extends Component {
   render() {
     return (
       <>
@@ -38,4 +38,4 @@ class AppartementDisplay extends Component {
   }
 }
 
-export default AppartementDisplay
+export default ImmeubleDisplay

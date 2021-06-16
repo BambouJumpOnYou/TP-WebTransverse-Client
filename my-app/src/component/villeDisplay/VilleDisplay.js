@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { GET_ALL_VILLES } from "../../queries/villeQuery"
-import { HomeCard } from "../homeCard/HomeCard"
+import { VilleCard } from "../villeCard/VilleCard"
 
 let tab = []
 
@@ -19,24 +19,7 @@ function DisplayAll() {
         imm.appartements.forEach((app) => {
           tab.push(
             <>
-              {/* <br />
-              <br />
-              <br />
-              <span>Nom : {ville.nom}</span>
-              <br />
-              <span>Code postal : {ville.codePostal}</span>
-              <br />
-              <span>Nom immeuble : {imm.nom}</span>
-              <br />
-              <span>Adresse immeuble: {imm.adresse}</span>
-              <br />
-              <span>Appartement numero : {app.numero}</span>
-              <br />
-              <span>Appartement nbPieces : {app.nbPieces}</span>
-              <br />
-              <br />
-              <br /> */}
-              <HomeCard ville={ville} immeubles={imm} appartements={app} />
+              <VilleCard ville={ville} />
             </>
           )
         })
@@ -46,7 +29,7 @@ function DisplayAll() {
   }
 }
 
-class HomeDisplay extends Component {
+class VilleDisplay extends Component {
   render() {
     return (
       <>
@@ -57,4 +40,4 @@ class HomeDisplay extends Component {
   }
 }
 
-export default HomeDisplay
+export default VilleDisplay

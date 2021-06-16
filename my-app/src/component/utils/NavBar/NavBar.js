@@ -12,13 +12,13 @@ class Navbar extends Component {
             <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/me">Profile</Link>
+            <Link to="/villes">Villes</Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/appartements">Appartements</Link>
           </li>
           <li>
-            <Link to="/tasks">Tasks</Link>
+            <Link to="/immeubles">Immeubles</Link>
           </li>
         </ul>
       </nav>
