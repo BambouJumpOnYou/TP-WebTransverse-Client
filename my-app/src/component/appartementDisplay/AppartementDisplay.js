@@ -2,10 +2,10 @@ import React, { Component } from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { GET_ALL_IMMEUBLES } from "../../queries/immeubleQuery"
 import { AppartementCard } from "../appartementCard/AppartementCard"
-
+import "./AppartementDisplay.css"
 
 let tab = []
-function DisplayAll() {
+function DisplayApp() {
   const { loading, error, data } = useQuery(GET_ALL_IMMEUBLES)
 
   if (loading) return <span className="status-warning">LOADING</span>
@@ -30,10 +30,10 @@ function DisplayAll() {
 class AppartementDisplay extends Component {
   render() {
     return (
-      <>
-        {/* <div>This is the home page.</div> */}
-        <DisplayAll />
-      </>
+      <div className="contentAppDisplay">
+        <button className="buttonAdd">Ajouter une ville</button>
+        <DisplayApp />
+      </div>
     )
   }
 }

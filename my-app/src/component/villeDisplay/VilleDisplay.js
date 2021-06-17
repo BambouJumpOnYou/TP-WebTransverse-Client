@@ -2,11 +2,12 @@ import React, { Component } from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { GET_ALL_VILLES } from "../../queries/villeQuery"
 import { VilleCard } from "../villeCard/VilleCard"
+import "./VilleDisplay.css"
 
 let tab = []
 
 // Your first graphql hooks
-function DisplayAll() {
+function DisplayVille() {
   const { loading, error, data } = useQuery(GET_ALL_VILLES)
 
   if (loading) return <span className="status-warning">LOADING</span>
@@ -15,15 +16,11 @@ function DisplayAll() {
     tab = []
     console.log(data)
     data.villes.forEach((ville) => {
-      ville.immeubles.forEach((imm) => {
-        imm.appartements.forEach((app) => {
-          tab.push(
-            <>
-              <VilleCard ville={ville} />
-            </>
-          )
-        })
-      })
+      tab.push(
+        <>
+          <VilleCard ville={ville} />
+        </>
+      )
     })
     return tab
   }
@@ -32,10 +29,10 @@ function DisplayAll() {
 class VilleDisplay extends Component {
   render() {
     return (
-      <>
-        {/* <div>This is the home page.</div> */}
-        <DisplayAll />
-      </>
+      <div className="contentVilleDisplay">
+        <button className="buttonAdd">Ajouter une ville</button>
+        <DisplayVille />
+      </div>
     )
   }
 }

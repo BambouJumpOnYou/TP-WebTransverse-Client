@@ -1,9 +1,11 @@
 import React from "react"
 import rm from "../../cross.png"
+import "./VilleCard.css"
+import "../utils/common.css"
 
 export const VilleCard = (props) => {
   return (
-    <div className={"ma_div"}>
+    <div className={"card cardVille"}>
       <img
         src={rm}
         style={{ height: 25, width: 25, marginLeft: "auto", padding: "1%" }}

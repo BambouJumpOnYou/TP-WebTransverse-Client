@@ -17,25 +17,14 @@ function DisplayAll() {
     data.villes.forEach((ville) => {
       ville.immeubles.forEach((imm) => {
         imm.appartements.forEach((app) => {
+          console.log("Ville ")
+          console.log(ville)
+          console.log("Imm ")
+          console.log(imm)
+          console.log("App ")
+          console.log(app)
           tab.push(
             <>
-              {/* <br />
-              <br />
-              <br />
-              <span>Nom : {ville.nom}</span>
-              <br />
-              <span>Code postal : {ville.codePostal}</span>
-              <br />
-              <span>Nom immeuble : {imm.nom}</span>
-              <br />
-              <span>Adresse immeuble: {imm.adresse}</span>
-              <br />
-              <span>Appartement numero : {app.numero}</span>
-              <br />
-              <span>Appartement nbPieces : {app.nbPieces}</span>
-              <br />
-              <br />
-              <br /> */}
               <HomeCard ville={ville} immeubles={imm} appartements={app} />
             </>
           )

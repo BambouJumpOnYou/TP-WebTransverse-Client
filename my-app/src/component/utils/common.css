@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2%;
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+}
+
+.texte {
+  color: white;
+}

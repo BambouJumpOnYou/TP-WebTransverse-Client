@@ -2,10 +2,10 @@ import React, { Component } from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { GET_ALL_IMMEUBLES } from "../../queries/immeubleQuery"
 import { ImmeubleCard } from "../immeubleCard/ImmeubleCard"
-
+import "./ImmeubleDisplay.css"
 
 let tab = []
-function DisplayAll() {
+function DisplayImm() {
   const { loading, error, data } = useQuery(GET_ALL_IMMEUBLES)
 
   if (loading) return <span className="status-warning">LOADING</span>
@@ -15,13 +15,11 @@ function DisplayAll() {
     console.log(data)
     data.villes.forEach((ville) => {
       ville.immeubles.forEach((imm) => {
-        imm.appartements.forEach((app) => {
-          tab.push(
-            <>
-              <ImmeubleCard immeubles={imm} />
-            </>
-          )
-        })
+        tab.push(
+          <>
+            <ImmeubleCard immeubles={imm} />
+          </>
+        )
       })
     })
     return tab
@@ -30,10 +28,10 @@ function DisplayAll() {
 class ImmeubleDisplay extends Component {
   render() {
     return (
-      <>
-        {/* <div>This is the home page.</div> */}
-        <DisplayAll />
-      </>
+      <div className="contentImmDisplay">
+        <button className="buttonAdd">Ajouter une ville</button>
+        <DisplayImm />
+      </div>
     )
   }
 }

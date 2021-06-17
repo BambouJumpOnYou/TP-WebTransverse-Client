@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./NavBar.css";
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import "./NavBar.css"
 
 class Navbar extends Component {
-
   render() {
     return (
       <nav>
@@ -15,15 +14,15 @@ class Navbar extends Component {
             <Link to="/villes">Villes</Link>
           </li>
           <li>
-            <Link to="/appartements">Appartements</Link>
+            <Link to="/immeubles">Immeubles</Link>
           </li>
           <li>
-            <Link to="/immeubles">Immeubles</Link>
+            <Link to="/appartements">Appartements</Link>
           </li>
         </ul>
       </nav>
-    );
+    )
   }
 }
 
-export default Navbar;
+export default Navbar
