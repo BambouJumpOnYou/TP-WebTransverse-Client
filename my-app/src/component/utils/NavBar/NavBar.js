@@ -8,7 +8,7 @@ class Navbar extends Component {
       <nav>
         <ul className="nav-list">
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/villes">Villes</Link>

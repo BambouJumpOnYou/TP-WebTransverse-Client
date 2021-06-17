@@ -24,9 +24,6 @@ function App() {
       </ul> */}
 
       <Switch>
-        <Route path="/home">
-          <HomeDisplay />
-        </Route>
         <Route path="/villes">
           <VilleDisplay />
         </Route>
@@ -35,6 +32,9 @@ function App() {
         </Route>
         <Route path="/appartements">
           <AppartementDisplay />
+        </Route>
+        <Route path="/">
+          <HomeDisplay />
         </Route>
       </Switch>
 
