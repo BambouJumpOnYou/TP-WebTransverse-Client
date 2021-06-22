@@ -22,7 +22,7 @@ const AJOUTER_IMMEUBLE_TO_VILLE = gql`
 
 const DELETE_VILLE = gql`
   mutation DELETE_VILLE($_id: ID!) {
-    deleteVille(_id: $id)
+    deleteVille(_id: $_id)
   }
 `
 

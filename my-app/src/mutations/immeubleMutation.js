@@ -22,7 +22,7 @@ const AJOUTER_APPARTEMENT_TO_IMMEUBLE = gql`
 
 const DELETE_IMMEUBLE = gql`
   mutation DELETE_IMMEUBLE($_id: ID!) {
-    deleteImmeuble(_id: $id)
+    deleteImmeuble(_id: $_id)
   }
 `
 

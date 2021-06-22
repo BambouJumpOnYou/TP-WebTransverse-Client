@@ -2,14 +2,13 @@ import gql from "graphql-tag"
 
 const GET_ALL_IMMEUBLES = gql`
   query GET_ALL_IMMEUBLES {
-    villes {
-      immeubles {
-        nom
-        adresse
-        appartements {
-          numero
-          nbPieces
-        }
+    immeubles {
+      _id
+      nom
+      adresse
+      appartements {
+        numero
+        nbPieces
       }
     }
   }

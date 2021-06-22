@@ -8,7 +8,7 @@ const CREATION_APPARTEMENT = gql`
 
 const DELETE_APPARTEMENT = gql`
   mutation DELETE_APPARTEMENT($_id: ID!) {
-    deleteAppartement(_id: $id)
+    deleteAppartement(_id: $_id)
   }
 `
 

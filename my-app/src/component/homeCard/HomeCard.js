@@ -6,11 +6,11 @@ import rm from "../../cross.png"
 export const HomeCard = (props) => {
   return (
     <div className={"card cardHome"}>
-      <img
+      {/* <img
         src={rm}
         style={{ height: 25, width: 25, marginLeft: "auto", padding: "1%" }}
         alt="rm"
-      />
+      /> */}
       <br />
       <span>
         <b>Nom</b> : <span className={"texte"}>{props.ville.nom}</span>
