@@ -1,5 +1,4 @@
 import React from "react"
-import "./App.css"
 import { Switch, Route } from "react-router-dom"
 import AppartementDisplay from "./component/appartementDisplay/AppartementDisplay"
 import ImmeubleDisplay from "./component/immeubleDisplay/ImmeubleDisplay"
@@ -7,6 +6,8 @@ import HomeDisplay from "./component/homeDisplay/HomeDisplay"
 import VilleDisplay from "./component/villeDisplay/VilleDisplay"
 import Navbar from "./component/utils/NavBar/NavBar"
 import { makeStyles } from "@material-ui/core"
+import "./App.css"
+import "./App.scss"
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {

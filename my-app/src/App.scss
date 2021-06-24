@@ -1,0 +1,19 @@
+$color: white;
+$twoPercent: 2%;
+$onePercent: 1%;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $twoPercent;
+  width: 30%;
+  margin-top: $twoPercent;
+  margin-bottom: $twoPercent;
+  padding-bottom: $onePercent;
+}
+
+.texte {
+  color: $color;
+}

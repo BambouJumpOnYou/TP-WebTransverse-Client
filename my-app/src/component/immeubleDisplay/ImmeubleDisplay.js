@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react"
+import React, { useState } from "react"
 import { useQuery, useMutation } from "@apollo/react-hooks"
 import { GET_ALL_IMMEUBLES } from "../../queries/immeubleQuery"
 import { ImmeubleCard } from "../immeubleCard/ImmeubleCard"

@@ -20,9 +20,10 @@ function DisplayApp() {
   if (error) return <span className="status-error">{error.message}</span>
   if (data) {
     tab = []
-    console.log(data)
+    let i = 0
     data.appartements.forEach((app) => {
-      tab.push(<AppartementCard appartements={app} />)
+      tab.push(<AppartementCard key={i} appartements={app} />)
+      i++
     })
     return tab
   }

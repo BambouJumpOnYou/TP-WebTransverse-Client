@@ -13,15 +13,19 @@ function DisplayAll() {
   if (error) return <span className="status-error">{error.message}</span>
   if (data) {
     tab = []
-    console.log(data)
+    let i = 0
     data.villes.forEach((ville) => {
       ville.immeubles.forEach((imm) => {
         imm.appartements.forEach((app) => {
           tab.push(
-            <>
-              <HomeCard ville={ville} immeubles={imm} appartements={app} />
-            </>
+            <HomeCard
+              key={i}
+              ville={ville}
+              immeubles={imm}
+              appartements={app}
+            />
           )
+          i++
         })
       })
     })
@@ -31,12 +35,7 @@ function DisplayAll() {
 
 class HomeDisplay extends Component {
   render() {
-    return (
-      <>
-        {/* <div>This is the home page.</div> */}
-        <DisplayAll />
-      </>
-    )
+    return <DisplayAll />
   }
 }
 

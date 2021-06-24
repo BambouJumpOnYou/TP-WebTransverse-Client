@@ -6,7 +6,6 @@ import {
   DELETE_IMMEUBLE,
 } from "../../mutations/immeubleMutation"
 import "./ImmeubleCard.css"
-import "../utils/common.css"
 import { GET_ALL_APPARTEMENTS } from "../../queries/appartementQuery"
 import Button from "@material-ui/core/Button"
 import Dialog from "@material-ui/core/Dialog"
@@ -35,7 +34,7 @@ function GenerateListImmeuble() {
 
 export const ImmeubleCard = (props) => {
   const [open, setOpen] = useState(false)
-  const [idImm, setIdImm] = useState(props.immeubles._id)
+  const [idImm] = useState(props.immeubles._id)
   const [idApp, setIdApp] = useState("")
   const [addApp] = useMutation(AJOUTER_APPARTEMENT_TO_IMMEUBLE)
   const [delImm] = useMutation(DELETE_IMMEUBLE)

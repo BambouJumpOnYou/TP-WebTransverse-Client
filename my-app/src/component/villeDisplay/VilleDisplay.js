@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useQuery, useMutation } from "@apollo/react-hooks"
 import { GET_ALL_VILLES } from "../../queries/villeQuery"
 import { CREATION_VILLE } from "../../mutations/villeMutation"

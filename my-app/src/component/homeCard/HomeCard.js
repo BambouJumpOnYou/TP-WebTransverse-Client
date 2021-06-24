@@ -1,7 +1,5 @@
 import React from "react"
 import "./HomeCard.css"
-import "../utils/common.css"
-import rm from "../../cross.png"
 
 export const HomeCard = (props) => {
   return (

@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import List from "@material-ui/core/List"
 import Divider from "@material-ui/core/Divider"
@@ -10,14 +10,40 @@ import HomeIcon from "@material-ui/icons/Home"
 import LocationCityIcon from "@material-ui/icons/LocationCity"
 import ApartmentIcon from "@material-ui/icons/Apartment"
 import HomeWorkIcon from "@material-ui/icons/HomeWork"
+import IconButton from "@material-ui/core/IconButton"
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import "./NavBar.css"
 
-class Navbar extends Component {
-  render() {
-    return (
-      <Drawer variant="permanent" anchor="top" style={{ marginBottom: "2%" }}>
+const Navbar = () => {
+  const [open, setOpen] = useState(true)
+
+  const handleDrawerOpen = () => {
+    setOpen(true)
+  }
+
+  const handleDrawerClose = () => {
+    setOpen(false)
+  }
+  return (
+    <>
+      <IconButton
+        onClick={handleDrawerOpen}
+        style={{ backgroundColor: "white", marginTop: "1%" }}
+      >
+        <KeyboardArrowDownIcon />
+      </IconButton>
+      <Drawer
+        variant="persistent"
+        anchor="top"
+        style={{ marginBottom: "2%" }}
+        open={open}
+      >
+        <IconButton onClick={handleDrawerClose}>
+          <KeyboardArrowUpIcon />
+        </IconButton>
         <Divider />
-        <List style={{ display: "flex", flexDirection: "row" }}>
+        <List className="nav-bar">
           <ListItem button component={Link} to="/">
             <ListItemIcon>
               <HomeIcon />
@@ -44,25 +70,8 @@ class Navbar extends Component {
           </ListItem>
         </List>
       </Drawer>
-
-      // <nav>
-      //   <ul className="nav-list">
-      //     <li>
-      //       <Link to="/">Home</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/villes">Villes</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/immeubles">Immeubles</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/appartements">Appartements</Link>
-      //     </li>
-      //   </ul>
-      // </nav>
-    )
-  }
+    </>
+  )
 }
 
 export default Navbar

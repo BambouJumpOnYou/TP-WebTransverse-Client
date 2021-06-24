@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import rm from "../../cross.png"
 import { useQuery, useMutation } from "@apollo/react-hooks"
-import { GET_ALL_VILLES } from "../../queries/villeQuery"
 import { GET_ALL_IMMEUBLES } from "../../queries/immeubleQuery"
 import {
   AJOUTER_IMMEUBLE_TO_VILLE,
@@ -17,7 +16,6 @@ import Select from "@material-ui/core/Select"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import "./VilleCard.css"
-import "../utils/common.css"
 
 let tabImmeuble = []
 
@@ -36,7 +34,7 @@ function GenerateListImmeuble() {
 
 export const VilleCard = (props) => {
   const [open, setOpen] = useState(false)
-  const [idVille, setIdVille] = useState(props.ville._id)
+  const [idVille] = useState(props.ville._id)
   const [idImm, setIdImm] = useState("")
   const [addImm] = useMutation(AJOUTER_IMMEUBLE_TO_VILLE)
   const [delVille] = useMutation(DELETE_VILLE)

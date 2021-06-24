@@ -1,12 +1,11 @@
 import React, { useState } from "react"
 import rm from "../../cross.png"
 import "./AppartementCard.css"
-import "../utils/common.css"
 import { DELETE_APPARTEMENT } from "../../mutations/appartementMutation"
 import { useMutation } from "@apollo/react-hooks"
 
 export const AppartementCard = (props) => {
-  const [idApp, setIdApp] = useState(props.appartements._id)
+  const [idApp] = useState(props.appartements._id)
   const [delApp] = useMutation(DELETE_APPARTEMENT)
 
   const handleDelete = () => {
